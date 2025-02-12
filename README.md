@@ -19,6 +19,14 @@ O usuário deve poder agendar uma transferência financeira com as seguintes inf
 1. Conta de origem (padrão XXXXXXXXXX), conta de destino (padrão XXXXXXXXXX), valor da 
 transferência, taxa (a ser calculada conforme tabela abaixo), data da transferência (data em 
 que será realizada a transferência) e data de agendamento (hoje);
+Post http://localhost:8080/transferencias/agendar
+{
+    "contaOrigem": "1234567890",
+    "contaDestino": "0987654321",
+    "valor": 1000.00,
+    "dataTransferencia": "2025-03-20" 
+}
+
 
 2. O cálculo da taxa sobre o valor a ser transferido depende da data de transferência como 
 segue:
@@ -27,3 +35,4 @@ segue:
 
 
 3. O usuário deve poder ver o extrato de todos os agendamentos cadastrados. 
+Get -http://localhost:8080/transferencias/extrato
