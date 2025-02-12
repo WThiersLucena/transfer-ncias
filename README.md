@@ -26,6 +26,9 @@ Post http://localhost:8080/transferencias/agendar
     "valor": 1000.00,
     "dataTransferencia": "2025-03-20" 
 }
+![image](https://github.com/user-attachments/assets/f65432d5-4fd9-4c92-8d8b-fc638ba28590)
+![image](https://github.com/user-attachments/assets/c2ed6630-b71f-4e9f-8dc1-a75cc3bd7d3c)
+
 
 
 2. O cálculo da taxa sobre o valor a ser transferido depende da data de transferência como 
@@ -36,3 +39,6 @@ segue:
 
 3. O usuário deve poder ver o extrato de todos os agendamentos cadastrados. 
 Get -http://localhost:8080/transferencias/extrato
+
+![image](https://github.com/user-attachments/assets/28e815f0-aca4-40d3-a5bc-5432725c7335)
+
