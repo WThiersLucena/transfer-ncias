@@ -41,3 +41,12 @@ Get -http://localhost:8080/transferencias/extrato
 
 ![image](https://github.com/user-attachments/assets/28e815f0-aca4-40d3-a5bc-5432725c7335)
 
+* Nova funcionabilidade disponibilizada no Back-End - Gerar PDF de extrato.
+  Get - http://localhost:8080/transferencias/extrato/pdf
+![image](https://github.com/user-attachments/assets/78a424fb-4881-416f-8040-309d0a4a0940)
+
+
+fazendo uso de dependencia itextpdf:
+![image](https://github.com/user-attachments/assets/5b4b7a61-0cff-49b4-a719-4e701d986923)
+
+Obs, nova funcionabilidade implementada somente nas classes Controller e Service, para exemplificação, o ideial e realizar conceitos de Solid, retirando sobrecarga de responsabilidades da função, ganhando mais desemprenho e melhor manutenciabilidade e seguindo padroes de boas praticas.
