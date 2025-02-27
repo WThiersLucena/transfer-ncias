@@ -25,7 +25,8 @@ Post http://localhost:8080/transferencias/agendar
     "contaDestino": "0987654321",
     "valor": 1000.00,
     "dataTransferencia": "2025-03-20" 
-}
+}.
+
 ![image](https://github.com/user-attachments/assets/f65432d5-4fd9-4c92-8d8b-fc638ba28590)
 
 
@@ -37,16 +38,18 @@ segue:
 
 
 3. O usuário deve poder ver o extrato de todos os agendamentos cadastrados. 
-Get -http://localhost:8080/transferencias/extrato
+Get -http://localhost:8080/transferencias/extrato.
 
 ![image](https://github.com/user-attachments/assets/28e815f0-aca4-40d3-a5bc-5432725c7335)
 
 * Nova funcionabilidade disponibilizada no Back-End - Gerar PDF de extrato.
-  Get - http://localhost:8080/transferencias/extrato/pdf
+  Get - http://localhost:8080/transferencias/extrato/pdf.
+
 ![image](https://github.com/user-attachments/assets/78a424fb-4881-416f-8040-309d0a4a0940)
 
 
 fazendo uso de dependencia itextpdf:
+
 ![image](https://github.com/user-attachments/assets/5b4b7a61-0cff-49b4-a719-4e701d986923)
 
 Obs, nova funcionabilidade implementada somente nas classes Controller e Service, para exemplificação, o ideial e realizar conceitos de Solid, retirando sobrecarga de responsabilidades da função, ganhando mais desemprenho e melhor manutenciabilidade e seguindo padroes de boas praticas.
