@@ -56,4 +56,19 @@ fazendo uso de dependencia itextpdf:
 
 ![image](https://github.com/user-attachments/assets/5b4b7a61-0cff-49b4-a719-4e701d986923)
 
+
+
+* Nova funcionabilidade disponibilizada no Back-End - Gerar planilha Excle de extrato.
+  
+  Get - http://localhost:8080/transferencias/extrato/excel
+
+  ![image](https://github.com/user-attachments/assets/0ebda14b-7911-4927-90ed-7b09bb084274)
+
+  
+* fazendo uso das seguintes dependencia :
+
+![image](https://github.com/user-attachments/assets/8320e276-079e-4145-8dec-bca53e71036e)
+
+
+
 Obs, nova funcionabilidade implementada somente nas classes Controller e Service, para exemplificação, o ideial e realizar conceitos de Solid, retirando sobrecarga de responsabilidades da função, ganhando mais desemprenho e melhor manutenciabilidade e seguindo padroes de boas praticas.
