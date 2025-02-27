@@ -72,68 +72,7 @@ public class TransferenciaService {
     /**
      * Método responsável por gerar um extrato de transferências em formato PDF.
      * @return byte[] contendo os dados binários do PDF gerado.
-     */
-    // public byte[] gerarExtratoPdf() {
-    //     logger.info("Iniciando geração do extrato em PDF...");
-
-    //     // Criamos um stream de saída para armazenar os dados do PDF em memória
-    //     ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-
-    //     // Criamos um documento PDF
-    //     Document document = new Document();
-
-    //     try {
-    //         // Criamos um escritor que vincula o documento ao stream de saída
-    //         PdfWriter.getInstance(document, outputStream);
-
-    //         // Abrimos o documento para escrita
-    //         document.open();
-
-    //         // Adicionamos um título ao extrato
-    //         document.add(new Paragraph("Extrato de Transferências"));
-    //         document.add(new Paragraph("====================================="));
-
-    //         // Obtendo transferências do banco de dados
-    //         List<Transferencia> transferencias = transferenciaRepository.findAll();
-
-    //         // Registrando no log a quantidade de transferências
-    //         logger.info("Foram encontradas {} transferências para o extrato.", transferencias.size());
-
-    //         // Formatador de data para exibição no PDF
-    //         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy")
-            
-    //         ;
-    //         // Adicionamos cada transferência ao documento PDF
-    //         for (Transferencia transferencia : transferencias) {
-    //             String detalheTransferencia = String.format(
-    //                     "Data: %s | Conta Origem: %s | Conta Destino: %s | Valor: R$%.2f | Taxa: R$%.2f",
-    //                     transferencia.getDataTransferencia().format(formatter),
-    //                     transferencia.getContaOrigem(),
-    //                     transferencia.getContaDestino(),
-    //                     transferencia.getValor(),
-    //                     transferencia.getTaxa() != null ? transferencia.getTaxa() : BigDecimal.ZERO
-    //             );
-    //             document.add(new Paragraph(detalheTransferencia));
-    //         }
-
-    //         // Fechamos o documento, finalizando a escrita no PDF
-    //         document.close();
-    //         logger.info("PDF gerado com sucesso.");
-
-    //     } catch (DocumentException e) {
-    //         // Caso ocorra um erro na geração do PDF, registramos no log
-    //         logger.error("Erro ao gerar o PDF: {}", e.getMessage(), e);
-    //     }
-
-    //     // Convertendo o PDF para um array de bytes
-    //     byte[] pdfBytes = outputStream.toByteArray();
-
-    //     // Registramos no log o tamanho final do arquivo gerado
-    //     logger.info("Tamanho final do PDF: {} bytes", pdfBytes.length);
-
-    //     // Retornamos o PDF em formato de array de bytes
-    //     return pdfBytes;
-    // }
+     */ 
     
     public byte[] gerarExtratoPdf() {
         logger.info("Iniciando geração do extrato em PDF...");

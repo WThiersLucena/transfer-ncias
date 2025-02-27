@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.transfinan.transfinan.dto.TransferenciaDTO;
 import com.transfinan.transfinan.model.Transferencia;
+import com.transfinan.transfinan.service.ExtratoExcelService;
 import com.transfinan.transfinan.service.TransferenciaService;
 
 import org.slf4j.Logger;
@@ -19,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 
 
@@ -31,6 +33,9 @@ public class TransferenciaController {
     
     @Autowired
     private  TransferenciaService transferenciaService;
+
+    @Autowired
+    private ExtratoExcelService extratoExcelService;
 
     private static Logger logger = LoggerFactory.getLogger(TransferenciaService.class);
 
@@ -70,6 +75,18 @@ public class TransferenciaController {
         return ResponseEntity.ok()
                 .headers(headers)
                 .body(pdfBytes);
+    }
+
+
+    @GetMapping("/extrato/excel")
+    public ResponseEntity<byte[]> gerarExtratoExcel() {
+        byte[] excelBytes = extratoExcelService.gerarExtratoExcel();
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.add(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=extrato.xlsx");
+        headers.add(HttpHeaders.CONTENT_TYPE, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
+
+        return new ResponseEntity<>(excelBytes, headers, HttpStatus.OK);
     }
 
 }
