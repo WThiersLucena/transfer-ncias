@@ -24,4 +24,5 @@ public class TaxaService {
         logger.info("Taxa aplicada para {} dias: {}", dias, taxaCalculada);
         return taxaCalculada;
     }
+    
 }
