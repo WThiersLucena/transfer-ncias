@@ -19,7 +19,9 @@ O usuário deve poder agendar uma transferência financeira com as seguintes inf
 1. Conta de origem (padrão XXXXXXXXXX), conta de destino (padrão XXXXXXXXXX), valor da 
 transferência, taxa (a ser calculada conforme tabela abaixo), data da transferência (data em 
 que será realizada a transferência) e data de agendamento (hoje);
+
 Post http://localhost:8080/transferencias/agendar
+
 {
     "contaOrigem": "1234567890",
     "contaDestino": "0987654321",
@@ -37,12 +39,14 @@ segue:
 ![image](https://github.com/user-attachments/assets/82159cc9-baeb-4f9c-9280-ce8832477217)
 
 
-3. O usuário deve poder ver o extrato de todos os agendamentos cadastrados. 
+3. O usuário deve poder ver o extrato de todos os agendamentos cadastrados.
+   
 Get -http://localhost:8080/transferencias/extrato.
 
 ![image](https://github.com/user-attachments/assets/28e815f0-aca4-40d3-a5bc-5432725c7335)
 
 * Nova funcionabilidade disponibilizada no Back-End - Gerar PDF de extrato.
+  
   Get - http://localhost:8080/transferencias/extrato/pdf.
 
 ![image](https://github.com/user-attachments/assets/78a424fb-4881-416f-8040-309d0a4a0940)
